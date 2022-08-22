@@ -1,24 +1,69 @@
-import logo from './logo.svg';
+import { Routes, Route } from 'react-router-dom';
+import { useState, useEffect } from 'react';
 import './App.css';
+import Intro from './components/Intro';
+import Player from './components/Player';
+
 
 function App() {
+
+  const [songs] = useState( [
+    {
+      title: "Agent Tina",
+      artist: "Anirudh Ravichander",
+      img_src: "https://1480864561.rsc.cdn77.org/assets/news_images/kamal-haasan-in-vikram-movie-agent-tina-promo-video-lokesh-kanagaraj_1655633685.jpg",
+      src: "./music/Agent-Tina.mp3"
+    },
+    {
+      title: "Rolex",
+      artist: "Anirudh Ravichander",
+      img_src: "./images/rolex.jpg",
+      src: "./music/Rolex-Theme.mp3"
+    },
+    {
+      title: "Agent Vikram",
+      artist: "Anirudh Ravichander",
+      img_src: "./images/agent_vikram.jpg",
+      src: "./music/Agent-Vikram.mp3"
+    },
+    {
+      title: "Porkanda Singam",
+      artist: "Anirudh Ravichander",
+      img_src: "./images/porkandam_singam.jpg",
+      src: "./music/Porkanda-Singam.mp3"            
+    }, 
+    {
+      title: "Lokiverse",
+      artist: "Anirudh Ravichander",
+      img_src: "./images/lokiverse.jpg",
+      src: "./music/Lokiverse.mp3"
+    }
+  ])
+
+  const [currentSongIndex, setCurrentSongIndex ] = useState(0);
+  const [nextSongIndex, setNextSongIndex] = useState(currentSongIndex + 1);
+
+  useEffect ( () => {
+    setNextSongIndex(() => {
+      if (currentSongIndex + 1 > songs.length - 1){
+        return 0;
+      } else {
+        return currentSongIndex + 1;
+      } 
+    })
+  }, [currentSongIndex] );
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Routes>
+      <Route path='/' element={<Intro />} />
+      <Route path='/Player' element={
+      <Player 
+        currentSongIndex = {currentSongIndex}
+        setCurrentSongIndex = {setCurrentSongIndex}
+        nextSongIndex = {nextSongIndex}
+        songs = {songs}
+      />} />
+    </Routes>
   );
 }
 

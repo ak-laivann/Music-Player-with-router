@@ -1,0 +1,34 @@
+
+.buttons {
+    padding: 2px;
+}
+
+.skip-btn {
+    padding: 3px;
+    margin: 10px;
+    border-radius: 15px;
+    box-shadow: 2px 2px 4px whitesmoke;
+    width: 5vw;
+    height: 5vh;
+    background-color: purple;
+}
+
+.play-btn {
+    padding: 3px; 
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px whitesmoke;
+    width: 5vw;
+    height: 10vh;
+    background-color: green;
+}
+
+.pause-btn {
+    padding: 3px; 
+    margin: 5px;
+    border-radius: 50%;
+    box-shadow: 2px 2px 4px whitesmoke;
+    width: 5vw;
+    height: 10vh;
+    background-color: yellow;
+}

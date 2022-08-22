@@ -1,0 +1,15 @@
+
+img {
+    border-radius: 20%;
+    box-shadow: 10px 10px 10px whitesmoke;
+    border: 1px solid whitesmoke;
+    width: 40vw;
+    height: 40vh;
+}
+
+h3 {
+    font-family: 'Times New Roman', Times, serif;
+    text-shadow: 6px 6px 5px black;
+    color: white;
+    font-size: x-large;
+}
