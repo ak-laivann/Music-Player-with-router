@@ -1,70 +1,44 @@
-# Getting Started with Create React App
+# React-Music-Player with Router and Hooks
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+used the useState, useRef and useEffect hooks along with router configuration...
 
-## Available Scripts
+ofcourse copied a little from youtube... still whats learning without copying??
 
-In the project directory, you can run:
+## Router
 
-### `npm start`
+the Router had to be installed using the npm command
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+the Index.js or Main.js should have whats called the BrowserRouter component imported from 'react-router-dom'
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+the App.js should have the Routes and Route component imported from 'react-router-dom'
 
-### `npm test`
+The BrowserRouter tag should enclose the App element in Index.js or Main.js file
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+The Routes tag should enclose the main elements inside the app
 
-### `npm run build`
+The Route tag will have the path and an element....the path should be set as an variablename or as will... and the element attribute will have the component to be diaplayed inside the app...
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+the Route tag is an self closing tag
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+'/' - path indicates the home page
+'/x' - path indicates the next element including the transistion or effect of will...
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+the element.js should have the link component imported from the 'react-router-dom'
 
-### `npm run eject`
+inside the element.js file's return statement there must be a link tag replacing the button tag....
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+the to attribute inside Link tag should enclose the variable path mentioned in the Route tag
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+The final element to b displayed need not have the link component imported from 'react-router-dom'.
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Hooks used in the project
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+useState is used to enclose the song list and the state of its playing and the index of it...
 
-## Learn More
+the songs with the title description and artist with image src and src of music is enclosed as an object or array
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+now useEffect is used to update the index of the song...
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+now useRef is used  to state the state of the playing...
+used along with useEffect to change the state of its playing....
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
