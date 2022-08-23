@@ -42,4 +42,8 @@ now useEffect is used to update the index of the song...
 now useRef is used  to state the state of the playing...
 used along with useEffect to change the state of its playing....
 
-[![Watch the video](https://www.loom.com/share/71943380ce7f4ffd9e8cfe73083fd7e7)
+
+https://user-images.githubusercontent.com/110388514/186103878-4fbe7003-1fd3-4d65-98fd-4d5f876b2fe5.mp4
+
+
+
